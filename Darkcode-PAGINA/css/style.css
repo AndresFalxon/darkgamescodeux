@@ -1,0 +1,733 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+.container{
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+    background: url(/Darkcode-PAGINA/imagenesdefondocomp/PRINCIPAL_.jpg);
+    background-size: cover;
+    filter:brightness(0.-4);
+
+}
+
+nav{
+    padding: 8px;
+}
+
+.logo{
+    float: left;
+    padding: 8px;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.logo a{
+    margin-left: 80px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+   display: inline-block;
+   float: left;
+   text-shadow: 2px 2px 2px black;
+}
+nav ul li:not(:first-child){
+    margin-left: 48px;
+
+}
+nav ul li:last-child{
+    margin-right: 24px;
+}
+
+nav ul li a{
+    display: inline-block;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:864px){
+    .logo{
+        padding: 0;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgb(240, 240, 240);
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+
+    .nav-wrapper ul{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+    .nav-wrapper ul li{
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    .nav-wrapper ul li:nth-child(1) a{
+        transition-delay: 0.2s;
+    }
+    .nav-wrapper ul li:nth-child(2) a{
+        transition-delay: 0.3s;
+    }
+    .nav-wrapper ul li:nth-child(3) a{
+        transition-delay: 0.4s;
+    }
+    .nav-wrapper ul li:nth-child(4) a{
+        transition-delay: 0.5s;
+    }
+
+    .nav-wrapper ul li:not(:first-child){
+        margin-left: 0;
+    }
+
+    .nav-wrapper ul li a {
+        padding: 10px 24px;
+        opacity: 0;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        transform: translateX(-20px);
+        transition: all 0.2s ease;
+    }
+
+    .nav-btn{
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+
+    .nav-btn i{
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+        margin-left: 14px;
+    }
+    .nav-btn i:nth-child(1){
+        margin-top: 16px;
+    }
+
+    .nav-btn i:nth-child(2){
+        margin-top: 4px;
+        opacity: 1;
+    }
+
+    .nav-btn i:nth-child(3){
+        margin-top: 4px;
+    } 
+
+}
+
+#nav:checked + .nav-btn{
+    transform: rotate(45deg);
+}
+#nav:checked + .nav-btn i{
+    background: white;
+    transition: transform 0.2s ease;
+}
+#nav:checked + .nav-btn i:nth-child(1){
+    transform: translateY(6px) rotate(180deg);
+}
+#nav:checked + .nav-btn i:nth-child(2){
+    opacity: 0;
+}
+#nav:checked + .nav-btn i:nth-child(3){
+    transform: translateY(-6px) rotate(90deg);
+}
+#nav:checked ~ .nav-wrapper{
+    z-index: 9990;
+    opacity: 1;
+}
+#nav:checked ~ .nav-wrapper ul li a{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden{
+    display: none;
+}
+/* TEXTO DENTRO DE LA PAGINA PRINCIPAL */
+
+.portada-info{
+    margin-left: 100px;
+    margin-top: 350px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+.sub{
+    font-size: 20px;
+    margin-top: -20px;
+    margin-left: 30pxs;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+
+}
+.vermas{
+
+        font-size:30px;
+        font-family: 'Poppins', sans-serif;
+        margin-top: -20px;
+        margin-left: 10px;
+        marker-end: -20px;
+        background: linear-gradient(to right,red,black);
+        color:white;
+        border:0px;
+        width:250px;
+        height:40px;
+        cursor: pointer;
+}
+
+
+
+/* TENDENCIAS */
+.tendencias{
+    display: inline-block;
+    margin-top: -20px;
+    width: 100%;
+    height: 800px;
+    background: url(/Darkcode-PAGINA/imagenesdefondocomp/TENDENCIAS.jpg);
+    background-size: cover;
+    filter:brightness(0.-6);
+}
+.tendencias-title{
+    margin-top: 40px;
+    margin-right: 280px;
+    margin-left: 280px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,red,black);
+    
+}
+
+/* CSS Document */
+.slider {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+	
+    }
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0%{margin-left: 0;}
+	20%{margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+.noticias-title{
+    margin-top: 40px;
+    margin-right: 280px;
+    margin-left: 280px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,red,black);
+    
+}
+
+.noticias {
+    display: inline-block;
+    margin-top: -20px;
+    width: 100%;
+    height: 800px;
+    background: url("fondo.png");
+    box-shadow: 2px 2px 10px #000000;
+    background-size: cover;
+    filter:brightness(0.-6);
+     }
+
+
+
+/* RESEÑAS */
+.reseñas{
+    display: inline-block;
+    margin-top: -20px;
+    width: 100%;
+    height: 800px;
+    background: url(/Darkcode-PAGINA/imagenesdefondocomp/RESEÑAS.jpg);
+    background-size: cover;
+    filter:brightness(0.9);
+}
+.reseñas-title{
+    margin-top: 40px;
+    margin-right: 280px;
+    margin-left: 280px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,red,black);
+}
+
+.last{
+    margin-top: 440px;
+    margin-left: 600px;
+    width: 290;
+    height: 150;
+    box-shadow: 2px 2px 10px #000000;
+    background: url(/Darkcode-PAGINA/imagenes/RESEÑA-THELAST-4.jpg);
+    background-size: cover,300px 600px;
+    background-position: -48vh;
+
+}
+
+.last-titulo{
+    width: 300;
+    height: 100;
+    display: inline-block;
+    color: white;
+    margin-top: -25px;
+    margin-left: 300px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.last-texto{
+    display: inline-block;
+    margin-top: 3px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hitman{
+    display: inline-block;
+    margin-top: -330px;
+    margin-left: 600px;
+    width: 290;
+    height: 150;
+    box-shadow: 2px 2px 10px #000000;
+    background: url(/Darkcode-PAGINA/imagenes/RESEÑA-AGENT-3.jpg);
+    background-size: cover,300px 600px;
+    background-position: -46.5vh;
+
+}
+.hitman-titulo{
+    width: 300;
+    height: 100;
+    display: inline-block;
+    color: white;
+    margin-top: -25px;
+    margin-left: 300px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.hitman-texto{
+    display: inline-block;
+    margin-top: -10px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.gears{
+    display: inline-block;
+    margin-top: -510px;
+    margin-left: 600px;
+    width: 290;
+    height: 150;
+    box-shadow: 2px 2px 10px #000000;
+    background: url(/Darkcode-PAGINA/imagenes/RESEÑA-GEARS-2.jpg);
+    background-size: cover,300px 600px;
+    background-position: -46.5vh;
+
+}
+
+.gears-titulo{
+    width: 300;
+    height: 100;
+    display: inline-block;
+    color: white;
+    margin-top: -25px;
+    margin-left: 300px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.gears-texto{
+    display: inline-block;
+    margin-top: -5px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.mortal{
+    display: inline-block;
+    margin-top: -510.5px;
+    margin-left: 290px;
+    width: 290;
+    height: 510;
+    box-shadow: 2px 2px 10px #000000;
+    background: url(/Darkcode-PAGINA/imagenes/RESEÑAS-MORTAL-1.jpg);
+    background-size: cover,300px 600px;
+    background-position: -43vh;
+}
+
+.mortal-titulo{
+    margin-left: 20px;
+    margin-top: 380px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.mortal-texto{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 5px;
+}
+/* DESCARGAR JUEGOS */
+
+.descargar{
+    display: inline-block;
+    margin-top: -20px;
+    width: 100%;
+    height: 850px;
+    background: url(/Darkcode-PAGINA/imagenesdefondocomp/DESCARGARJUEGOS.jpg);
+    background-size: cover;
+    filter:brightness(0.9);
+}
+.descargar-title{
+    margin-top: 40px;
+    margin-right: 280px;
+    margin-left: 280px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,red,black);
+}
+
+.descargar-imagenes{
+    color: white;
+    margin-top: 300px;
+    margin-left: 70px;
+    letter-spacing: 2px;
+}
+
+.info-des{
+    margin-top: -20px;
+    letter-spacing: normal;
+    display: inline-block;
+}
+
+hr {
+    border-color:white;
+    margin-right: 1000px;
+  }
+
+.ion-1x { font-size: 80px !important;
+}
+
+.ion-2x { 
+    font-size: 80px !important;
+    margin-left: 100px;
+    margin-top: -80px;
+    display: inline-block;
+}
+
+.ion-3x { 
+    font-size: 80px !important;
+    margin-left: 200px;
+    margin-top: -80px;
+    display: inline-block;
+}
+
+.prueba{
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 1000px;
+    background: linear-gradient(to right,red,black);
+
+}
+
+
+
+
+.primerjuego{
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    background: url(/Darkcode-PAGINA/imagenes/DESCARGARJUEGOS-HALO-3.jpg);
+    background-size: cover,300px 500px;
+    background-position: 50vh;
+    margin-top: -220px;
+    margin-left: 990px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+.segundojuego{
+    display: inline-block;
+    width: 250px;
+    height: 390px;
+    background: url(/Darkcode-PAGINA/imagenes/DESCARGARJUEGOS-R6-2.jpg);
+    background-size: cover,300px 500px;
+    background-position: -40vh;
+    margin-top: -350px;
+    margin-left: 750px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+
+.tercerjuego{
+    display: inline-block;
+    width: 330px;
+    height: 520px;
+    background: url(/Darkcode-PAGINA/imagenes/DESCARGARJUEGOS-COD-WWII-1.jpg);
+    background-size: cover,300px 450px;
+    background-position: -70vh;
+    margin-top: -510px;
+    margin-left: 450px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+
+/* NO TOCAR SE HACE UN DESMADRE SI MUEVES ALGO :) ^^^ */
+
+/* IMAGENES */
+.imagenes{
+    display: inline-block;
+    margin-top: -20px;
+    width: 100%;
+    height: 900px;
+    background: url(/Darkcode-PAGINA/imagenesdefondocomp/IMAGENESYTONOS.jpg);
+    background-size: cover;
+    filter:brightness(0.9);
+}
+.imagenes-title{
+    margin-top: 60px;
+    margin-right: 280px;
+    margin-left: 280px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,red,black);
+}
+
+/* IMAGENES "GALERIA"*/
+.imagenes{
+    display: inline-block;
+    margin-top: -20px;
+    width: 100%;
+    height: 900px;
+    background: url(/Darkcode-PAGINA/imagenesdefondocomp/IMAGENESYTONOS.jpg);
+    background-size: cover;
+    filter:brightness(0.9);
+}
+.imagenes-title{
+    margin-top: 80px;
+    margin-right: 280px;
+    margin-left: 280px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,red,black);
+}
+
+/* IMAGENES "GALERIA"*/
+
+.imgtonos{
+    display: inline-block;
+    background-color: white;
+    width: 800px;
+    height: 150px;
+    margin-top: 530px;
+    margin-left: 520px;
+    background: url(/Darkcode-PAGINA/imagenes/Grupo\ 1.png);
+    background-size: cover,400px 450px;
+    background-position: -50vh;
+}
+
+.caballero{
+    background: url(/Darkcode-PAGINA/imagenes/IMAGENES-5.jpg);
+    background-size: cover,400px 450px;
+    background-position: -64vh;
+    display: inline-block;
+    background-color: white;
+    width: 400;
+    height: 200;
+    margin-left: 400px;
+    margin-top: -230px;
+    box-shadow: 2px 2px 10px #000000;
+    
+    
+}
+
+.arma{
+    display: inline-block;
+    background: url(/Darkcode-PAGINA/imagenes/IMAGENES-4.jpg);
+    background-size: cover,400px 450px;
+    background-position: -64vh;
+    background-color: white;
+    width: 400;
+    height: 200;
+    margin-left: -5px;
+    margin-top: -230px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+
+.gas{
+    background: url(/Darkcode-PAGINA/imagenes/IMAGENES-3.jpg);
+    background-size: cover,400px 350px;
+    background-position:top, top center, center top;
+    background-color: white;
+    width: 800px;
+    height: 150px;
+    margin-top: -410px;
+    margin-left: -5px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+.fast{
+    background: url(/Darkcode-PAGINA/imagenes/IMAGENES-2.jpg);
+    background-size: cover,400px 350px;
+    background-position: -20vh;
+    background-color: white;
+    width: 400;
+    height: 380;
+    margin-left: -420px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+
+.dragon{
+    background: url(/Darkcode-PAGINA/imagenes/IMAGENES-1.jpg);
+    background-size: cover,400px 350px;
+    background-position: -64vh;
+    background-color: white;
+    width: 400;
+    height: 150;
+    margin-left: -420px;
+    margin-top: -150px;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+
+/* FOOTER */
+.piedepagina{
+    color: grey;
+    width: auto;
+    height: auto;
+}
+
+.titulofo{
+    letter-spacing: 4px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.carrera{
+    text-align: center;
+    margin-left: 30px;
+    margin-top: -20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.ux{
+    text-align: center;
+    margin-left: 30px;
+    margin-top: -20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.derecho{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+    margin-top: -20px;
+}
